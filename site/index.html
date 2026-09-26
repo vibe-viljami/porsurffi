@@ -79,7 +79,7 @@
 </head>
 <body>
   <main class="stage">
-    <video class="bg-video" src="assets/hero.mp4" poster="assets/poster.jpg" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-hidden="true"></video>
+    <video class="bg-video" src="assets/hero.mp4" poster="assets/poster.jpg" muted loop playsinline webkit-playsinline preload="metadata" aria-hidden="true"></video>
     <div class="tint"></div>
     <div class="shade"></div>
     <div class="center">
@@ -123,7 +123,6 @@
     document.addEventListener('visibilitychange', tryAutoplay);
     if (reducedMotion) {
       video.pause();
-      video.removeAttribute('autoplay');
       video.style.display = 'none';
     } else {
       tryAutoplay();
